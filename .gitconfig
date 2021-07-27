@@ -1,0 +1,26 @@
+# To enable using this file, replace %userprofile%\.gitconfig with the
+# following 2 lines, updating the path as appropriate.
+;[include]
+;   path = C:/Users/brettfo/OneDrive/Code/.gitconfig
+;<or>
+;   path = /home/brettfo/.gitconfig
+
+[user]
+    name = Brett V. Forsgren
+    useConfigOnly = true
+[alias]
+    lol = log --pretty='%h%Creset %Cgreen[%ar] %Cred%<(20,trunc)%an %Creset%s'
+    pf = pull --ff-only
+[fetch]
+    prune = true
+[remote]
+    prune = true
+[rerere]
+    enabled = true
+[core]
+    longpaths = true
+    symlinks = true
+[init]
+    defaultBranch = main
+[grep]
+    lineNumber = true
