@@ -18,6 +18,8 @@
 [rerere]
     enabled = true
 [core]
+    autocrlf = false
+    eol = lf
     longpaths = true
     symlinks = true
 [init]

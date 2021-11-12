@@ -61,6 +61,11 @@ function kci() {
     k "Code - Insiders"
 }
 
+function reset-lf() {
+    git rm -rf --cached .
+    git reset --hard HEAD
+}
+
 function root {
     $currentDir = Convert-Path .
     $candidateRoot = $currentDir
