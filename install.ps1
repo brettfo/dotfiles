@@ -3,7 +3,7 @@
 function Main() {
     # write .gitconfig redirect
     $thisPath = $PSScriptRoot -replace "\\", "/"
-    "[include]`n    path = $thisPath/git/.gitconfig" | Out-File -FilePath "~/.gitconfig"
+    "[include]`n    path = $thisPath/.gitconfig" | Out-File -FilePath "~/.gitconfig"
 
     # Windows-specific
     if ($IsWindows) {
