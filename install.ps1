@@ -17,8 +17,9 @@ function Main() {
         # prepare powershell profile
         ". ""$PSScriptRoot\pwsh\Profile.ps1""" | Out-File $PROFILE
 
-        # disable windows start menu web search
+        # custom registry settings
         regedit /s "$thisPath\Windows\DisableStartMenuWebSearch.reg"
+        regedit /s "$thisPath\Windows\RestoreFullContextMenus.reg"
     }
 }
 
