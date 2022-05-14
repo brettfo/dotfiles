@@ -21,6 +21,12 @@ function Main() {
         regedit /s "$thisPath\Windows\DisableStartMenuWebSearch.reg"
         regedit /s "$thisPath\Windows\RestoreFullContextMenus.reg"
     }
+
+    # Linux-specific
+    if ($IsLinux) {
+        # disable touchscreen
+        Add-Content ~/.profile (Get-Content "$PSScriptRoot/Linux/disable-touchscreen.sh")
+    }
 }
 
 function EnsureFileSymlink([string]$sourceDirectory, [string] $linkName, [string] $destinationLocation) {
