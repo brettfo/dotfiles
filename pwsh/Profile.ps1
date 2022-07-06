@@ -24,8 +24,9 @@ function prompt {
     )
     $displayPosh = $true
     $promptText = "[ $(get-location)"
+    $thisPath = (get-location).ToString()
     foreach ($p in $badPaths) {
-        if ($(get-location).ToString().StartsWith($p, [System.StringComparison]::OrdinalIgnoreCase)) {
+        if (($thisPath -eq $p) -or $thisPath.StartsWith("$p\", [System.StringComparison]::OrdinalIgnoreCase)) {
             $displayPosh = $false
         }
     }
